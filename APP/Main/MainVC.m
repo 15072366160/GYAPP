@@ -22,17 +22,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor black25PercentColor];
-    
-    UIImage *img = [UIImage imageGradualVertical:HEX_COLOR(@"f12711") endColor:HEX_COLOR(@"f5af19") size:CGSizeMake(SCREEN_WIDTH, [GYScreen shared].navBarH)];
-    [self.navigationController.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setTitle:@"登录" forState:UIControlStateNormal];
-    UIImage *image = [UIImage imageGradualVertical:HEX_COLOR(@"f12711") endColor:HEX_COLOR(@"f5af19") size:CGSizeMake(50, 200)];
+    UIImage *image = [UIImage imageGradualOblique:HEX_COLOR(@"#ff9966") endColor:HEX_COLOR(@"#ff5e62") size:CGSizeMake(50, 200)];
     [btn setBackgroundImage:image forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
+    [btn addTarget:self action:@selector(checkLogin) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(self.view.mas_centerX);

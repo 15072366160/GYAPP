@@ -36,5 +36,7 @@
 
 #import "UIImage+GY.h"
 
+#import "NSString+GY.h"
+
 
 #endif /* HeaderGategory_h */

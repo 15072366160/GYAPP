@@ -10,6 +10,12 @@
 		BC0B32ADC2B964E507DED984 /* libPods-APP.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36CA8C6F4D523096668D4CEC /* libPods-APP.a */; };
 		DA02C5B621904C92006B7643 /* MyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA02C5B521904C92006B7643 /* MyVC.m */; };
 		DA02C5B921904FE3006B7643 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA02C5B821904FE3006B7643 /* File.swift */; };
+		DA067A4E2191503400BAD864 /* NSString+GY.m in Sources */ = {isa = PBXBuildFile; fileRef = DA067A4D2191503400BAD864 /* NSString+GY.m */; };
+		DA0EE180219425C700A3B283 /* GYTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0EE17E219425C600A3B283 /* GYTransition.m */; };
+		DA0EE183219425F500A3B283 /* BaLoginNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0EE182219425F500A3B283 /* BaLoginNVC.m */; };
+		DA0EE18B21942D0C00A3B283 /* LoRegiestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0EE18921942D0C00A3B283 /* LoRegiestVC.m */; };
+		DA0EE18C21942D0C00A3B283 /* LoRegiestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA0EE18A21942D0C00A3B283 /* LoRegiestVC.xib */; };
+		DA0EE19021942D3100A3B283 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0EE18E21942D3100A3B283 /* LoginVC.m */; };
 		DAD03F21218BEFF800B92B8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD03F20218BEFF800B92B8B /* AppDelegate.m */; };
 		DAD03F24218BEFF800B92B8B /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD03F23218BEFF800B92B8B /* MainVC.m */; };
 		DAD03F29218BEFF900B92B8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD03F28218BEFF900B92B8B /* Assets.xcassets */; };
@@ -72,6 +78,17 @@
 		DA02C5B521904C92006B7643 /* MyVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyVC.m; sourceTree = "<group>"; };
 		DA02C5B721904FE3006B7643 /* APP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "APP-Bridging-Header.h"; sourceTree = "<group>"; };
 		DA02C5B821904FE3006B7643 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		DA067A4C2191503400BAD864 /* NSString+GY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+GY.h"; sourceTree = "<group>"; };
+		DA067A4D2191503400BAD864 /* NSString+GY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+GY.m"; sourceTree = "<group>"; };
+		DA0EE17E219425C600A3B283 /* GYTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYTransition.m; sourceTree = "<group>"; };
+		DA0EE17F219425C700A3B283 /* GYTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYTransition.h; sourceTree = "<group>"; };
+		DA0EE181219425F500A3B283 /* BaLoginNVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaLoginNVC.h; sourceTree = "<group>"; };
+		DA0EE182219425F500A3B283 /* BaLoginNVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaLoginNVC.m; sourceTree = "<group>"; };
+		DA0EE18821942D0C00A3B283 /* LoRegiestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoRegiestVC.h; sourceTree = "<group>"; };
+		DA0EE18921942D0C00A3B283 /* LoRegiestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoRegiestVC.m; sourceTree = "<group>"; };
+		DA0EE18A21942D0C00A3B283 /* LoRegiestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoRegiestVC.xib; sourceTree = "<group>"; };
+		DA0EE18D21942D3100A3B283 /* LoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		DA0EE18E21942D3100A3B283 /* LoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		DAD03F1C218BEFF800B92B8B /* APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD03F1F218BEFF800B92B8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DAD03F20218BEFF800B92B8B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -225,6 +242,18 @@
 			path = My;
 			sourceTree = "<group>";
 		};
+		DA0EE1842194296900A3B283 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DA0EE18D21942D3100A3B283 /* LoginVC.h */,
+				DA0EE18E21942D3100A3B283 /* LoginVC.m */,
+				DA0EE18821942D0C00A3B283 /* LoRegiestVC.h */,
+				DA0EE18921942D0C00A3B283 /* LoRegiestVC.m */,
+				DA0EE18A21942D0C00A3B283 /* LoRegiestVC.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		DAD03F13218BEFF800B92B8B = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +279,7 @@
 				DAD03FAB218C21E400B92B8B /* Categories */,
 				DAD03F4C218C005100B92B8B /* Lib */,
 				DAD03F39218BF9DA00B92B8B /* BaseClass */,
+				DA0EE1842194296900A3B283 /* Login */,
 				DAD03F36218BF06200B92B8B /* Main */,
 				DA02C5B321904C6A006B7643 /* My */,
 				DAD03F35218BF03300B92B8B /* Other */,
@@ -294,6 +324,8 @@
 		DAD03F3A218BF9E900B92B8B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA0EE17F219425C700A3B283 /* GYTransition.h */,
+				DA0EE17E219425C600A3B283 /* GYTransition.m */,
 				DAD03FB7218C278200B92B8B /* GYCommon.h */,
 				DAD03FB6218C278200B92B8B /* GYCommon.m */,
 				DAD03FB8218C278200B92B8B /* GYScreen.h */,
@@ -324,6 +356,8 @@
 				DAD03F4A218BFAC800B92B8B /* BaChildViewController.m */,
 				DAD03FDD218C2AC500B92B8B /* StartUpVC.h */,
 				DAD03FDE218C2AC500B92B8B /* StartUpVC.m */,
+				DA0EE181219425F500A3B283 /* BaLoginNVC.h */,
+				DA0EE182219425F500A3B283 /* BaLoginNVC.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -539,6 +573,8 @@
 				DAD03FD8218C29D800B92B8B /* NSUserDefaults+Category.m */,
 				DAD03FE0218C3E4A00B92B8B /* UIDevice+GY.h */,
 				DAD03FE1218C3E4A00B92B8B /* UIDevice+GY.m */,
+				DA067A4C2191503400BAD864 /* NSString+GY.h */,
+				DA067A4D2191503400BAD864 /* NSString+GY.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -636,6 +672,7 @@
 				DAD03F9D218C0AAF00B92B8B /* HMScanner.bundle in Resources */,
 				DAD03F29218BEFF900B92B8B /* Assets.xcassets in Resources */,
 				DAD03F81218C0A8A00B92B8B /* IDInfoViewController.xib in Resources */,
+				DA0EE18C21942D0C00A3B283 /* LoRegiestVC.xib in Resources */,
 				DAD03F87218C0A8A00B92B8B /* zocr0.lib in Resources */,
 				DAD03F85218C0A8A00B92B8B /* IDAuthViewController.xib in Resources */,
 			);
@@ -707,7 +744,10 @@
 				DAD03F2F218BEFF900B92B8B /* main.m in Sources */,
 				DAD03FB4218C220F00B92B8B /* UIAlertController+TT.m in Sources */,
 				DAD03F9E218C0AAF00B92B8B /* HMScanerCardViewController.m in Sources */,
+				DA0EE18B21942D0C00A3B283 /* LoRegiestVC.m in Sources */,
 				DAD03FD9218C29D800B92B8B /* NSUserDefaults+Category.m in Sources */,
+				DA0EE180219425C700A3B283 /* GYTransition.m in Sources */,
+				DA0EE19021942D3100A3B283 /* LoginVC.m in Sources */,
 				DAD03F83218C0A8A00B92B8B /* AVCaptureViewController.m in Sources */,
 				DAD03F3F218BFA3D00B92B8B /* BaTabBarController.m in Sources */,
 				DAD03F21218BEFF800B92B8B /* AppDelegate.m in Sources */,
@@ -720,6 +760,7 @@
 				DAD03FE2218C3E4A00B92B8B /* UIDevice+GY.m in Sources */,
 				DAD03FD1218C289400B92B8B /* UIScrollView+GY.m in Sources */,
 				DAD03F60218C0A7300B92B8B /* GYPopverVC.m in Sources */,
+				DA0EE183219425F500A3B283 /* BaLoginNVC.m in Sources */,
 				DAD03FAA218C20A800B92B8B /* GYNetworking+API.m in Sources */,
 				DAD03F88218C0A8A00B92B8B /* IDInfo.m in Sources */,
 				DAD03FA9218C20A800B92B8B /* GYNetworking.m in Sources */,
@@ -736,6 +777,7 @@
 				DAD03FBE218C280D00B92B8B /* FMDBManager.m in Sources */,
 				DAD03F8A218C0A8A00B92B8B /* RectManager.m in Sources */,
 				DAD03F99218C0AAF00B92B8B /* HMScannerBorder.m in Sources */,
+				DA067A4E2191503400BAD864 /* NSString+GY.m in Sources */,
 				DA02C5B621904C92006B7643 /* MyVC.m in Sources */,
 				DAD03FE6218C434800B92B8B /* CrashManager.m in Sources */,
 				DAD03FCF218C289400B92B8B /* UIView+GY.m in Sources */,

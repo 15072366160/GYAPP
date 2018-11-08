@@ -54,4 +54,18 @@
 
 #define BLACK_30               RGB_COLOR(0, 0, 0, 0.3)
 
+// 标签色 深蓝   要素
+#define BLUE_PRIMARY_COLOR     HEX_COLOR(@"006DCC")
+// 标签色 墨绿   信息
+#define GREEN_INFO_COLOR       HEX_COLOR(@"49afcd")
+// 标签色 绿色   成功
+#define GREEN_SUCCESS_COLOR    HEX_COLOR(@"5BB75B")
+// 标签色 橙黄色 警告
+#define ORANGE_WARN_COLOR      HEX_COLOR(@"FAA732")
+// 标签色 红色   危险
+#define RED_DANGER_COLOR       HEX_COLOR(@"DA4F49")
+// 标签色 浅蓝色 链接
+#define BLUE_LINK_COLOR        HEX_COLOR(@"0088CC")
+
+
 #endif /* HeaderColor_h */

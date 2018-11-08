@@ -14,5 +14,7 @@ typedef void(^BKBoolBlock)(BOOL flag);
 typedef void(^BKIdBlock)(id obj);
 typedef void(^BKVoidBlock)(void);
 typedef void(^BKIntegerBlock)(NSInteger num);
+typedef void(^BKStringBlock)(NSString *str);
+typedef void(^BKDictionaryBlock)(NSDictionary *info);
 
 #endif /* HeaderBlock_h */

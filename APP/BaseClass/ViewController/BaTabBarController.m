@@ -44,7 +44,8 @@
     self.tabBar.tintColor = HEX_COLOR(@"f12711");
     self.viewControllers = viewControllers;
     
-    self.selectedIndex = 1;
+    [self.tabBar setShadowImage:[UIImage jk_imageWithColor:LINE_COLOR_0]];
+    [self.tabBar setBackgroundImage:[UIImage jk_imageWithColor:BACKGROUND_COLOR]];
 }
 
 /*

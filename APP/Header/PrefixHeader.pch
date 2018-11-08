@@ -23,6 +23,7 @@
 #import "QBPopupMenu.h"
 
 // Header
+#import "HeaderBlock.h"
 #import "HeaderGategory.h"
 #import "HeaderDefine.h"
 #import "HeaderCode.h"
@@ -30,7 +31,6 @@
 #import "HeaderEnum.h"
 #import "HeaderConst.h"
 #import "HeaderUI.h"
-#import "HeaderBlock.h"
 
 // 自定义
 #import "GYHUD.h"

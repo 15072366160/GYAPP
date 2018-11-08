@@ -16,17 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.navigationBar.barStyle = UIBarStyleBlack;
+    
+    UIImage *img = [UIImage imageGradualOblique:HEX_COLOR(@"FF652D") endColor:HEX_COLOR(@"FF2424") size:CGSizeMake(SCREEN_WIDTH, [GYScreen shared].navBarH)];
+    [self.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
+    [self.navigationBar setShadowImage:[UIImage jk_imageWithColor:LINE_COLOR_0]];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "BaTabBarController.h"
 
+// 网络
+#import "AFHTTPSessionManager.h"
+
 // 微信
 #import "WXApi.h"
 #import "APP-Bridging-Header.h"
@@ -32,6 +35,9 @@
     
     // 微信注册
     [WXApi registerApp:AppID];
+    
+    // 检测网络
+    [self checkNetwork];
     
     return YES;
 }
@@ -88,6 +94,30 @@
              [GYHUD _showErrorWithStatus:@"网络未连接，请检查网络！"];
          }];
      }
+}
+
+#pragma mark -- 检测网络
+- (void)checkNetwork{
+    AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
+    [manager startMonitoring];
+    [manager setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case AFNetworkReachabilityStatusUnknown:
+                [GYHUD _showInfoWithStatus:@"未知网络"];
+                break;
+            case AFNetworkReachabilityStatusNotReachable:
+                [GYHUD _showErrorWithStatus:@"未检测到网络连接"];
+                break;
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+                [GYHUD _showInfoWithStatus:@"当前使用移动流量"];
+                break;
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+                [GYHUD _showSuccessWithStatus:@"当前使用WiFi网络"];
+                break;
+            default:
+                break;
+        }
+    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

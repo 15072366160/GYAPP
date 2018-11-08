@@ -26,5 +26,8 @@ static NSString  *const BackIMG_Gray            = @"BackIMG_Gray";
 // NOTI_WX_LOGIN
 static NSString  *const NOTI_WX_LOGIN           = @"NOTI_WX_LOGIN";
 
+// 普通点击按钮高度
+static CGFloat const TOUCHBTNHEIGHT = 50;
+
 
 #endif /* HeaderConst_h */
