@@ -13,9 +13,14 @@
 		DA067A4E2191503400BAD864 /* NSString+GY.m in Sources */ = {isa = PBXBuildFile; fileRef = DA067A4D2191503400BAD864 /* NSString+GY.m */; };
 		DA0EE180219425C700A3B283 /* GYTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0EE17E219425C600A3B283 /* GYTransition.m */; };
 		DA0EE183219425F500A3B283 /* BaLoginNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0EE182219425F500A3B283 /* BaLoginNVC.m */; };
-		DA0EE18B21942D0C00A3B283 /* LoRegiestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0EE18921942D0C00A3B283 /* LoRegiestVC.m */; };
-		DA0EE18C21942D0C00A3B283 /* LoRegiestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA0EE18A21942D0C00A3B283 /* LoRegiestVC.xib */; };
-		DA0EE19021942D3100A3B283 /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0EE18E21942D3100A3B283 /* LoginVC.m */; };
+		DA0EE18B21942D0C00A3B283 /* LoSendMsgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0EE18921942D0C00A3B283 /* LoSendMsgVC.m */; };
+		DA0EE19021942D3100A3B283 /* WeChatLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0EE18E21942D3100A3B283 /* WeChatLoginVC.m */; };
+		DA625C4D2195635300455FFB /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA625C4B2195635300455FFB /* LoginVC.m */; };
+		DA625C4E2195635300455FFB /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA625C4C2195635300455FFB /* LoginVC.xib */; };
+		DA625C5121956FFB00455FFB /* MyUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA625C5021956FFB00455FFB /* MyUserModel.m */; };
+		DA625C5521957A4000455FFB /* LoSendMsgVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA625C5421957A4000455FFB /* LoSendMsgVC.xib */; };
+		DA625C592195847800455FFB /* LoQuestionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA625C572195847800455FFB /* LoQuestionVC.m */; };
+		DA625C5A2195847800455FFB /* LoQuestionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA625C582195847800455FFB /* LoQuestionVC.xib */; };
 		DAD03F21218BEFF800B92B8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD03F20218BEFF800B92B8B /* AppDelegate.m */; };
 		DAD03F24218BEFF800B92B8B /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD03F23218BEFF800B92B8B /* MainVC.m */; };
 		DAD03F29218BEFF900B92B8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD03F28218BEFF900B92B8B /* Assets.xcassets */; };
@@ -84,11 +89,19 @@
 		DA0EE17F219425C700A3B283 /* GYTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYTransition.h; sourceTree = "<group>"; };
 		DA0EE181219425F500A3B283 /* BaLoginNVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaLoginNVC.h; sourceTree = "<group>"; };
 		DA0EE182219425F500A3B283 /* BaLoginNVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaLoginNVC.m; sourceTree = "<group>"; };
-		DA0EE18821942D0C00A3B283 /* LoRegiestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoRegiestVC.h; sourceTree = "<group>"; };
-		DA0EE18921942D0C00A3B283 /* LoRegiestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoRegiestVC.m; sourceTree = "<group>"; };
-		DA0EE18A21942D0C00A3B283 /* LoRegiestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoRegiestVC.xib; sourceTree = "<group>"; };
-		DA0EE18D21942D3100A3B283 /* LoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
-		DA0EE18E21942D3100A3B283 /* LoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		DA0EE18821942D0C00A3B283 /* LoSendMsgVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoSendMsgVC.h; sourceTree = "<group>"; };
+		DA0EE18921942D0C00A3B283 /* LoSendMsgVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoSendMsgVC.m; sourceTree = "<group>"; };
+		DA0EE18D21942D3100A3B283 /* WeChatLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatLoginVC.h; sourceTree = "<group>"; };
+		DA0EE18E21942D3100A3B283 /* WeChatLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatLoginVC.m; sourceTree = "<group>"; };
+		DA625C4A2195635300455FFB /* LoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
+		DA625C4B2195635300455FFB /* LoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		DA625C4C2195635300455FFB /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
+		DA625C4F21956FFB00455FFB /* MyUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyUserModel.h; sourceTree = "<group>"; };
+		DA625C5021956FFB00455FFB /* MyUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyUserModel.m; sourceTree = "<group>"; };
+		DA625C5421957A4000455FFB /* LoSendMsgVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoSendMsgVC.xib; sourceTree = "<group>"; };
+		DA625C562195847800455FFB /* LoQuestionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoQuestionVC.h; sourceTree = "<group>"; };
+		DA625C572195847800455FFB /* LoQuestionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoQuestionVC.m; sourceTree = "<group>"; };
+		DA625C582195847800455FFB /* LoQuestionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoQuestionVC.xib; sourceTree = "<group>"; };
 		DAD03F1C218BEFF800B92B8B /* APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD03F1F218BEFF800B92B8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DAD03F20218BEFF800B92B8B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -236,8 +249,8 @@
 		DA02C5B321904C6A006B7643 /* My */ = {
 			isa = PBXGroup;
 			children = (
-				DA02C5B421904C92006B7643 /* MyVC.h */,
-				DA02C5B521904C92006B7643 /* MyVC.m */,
+				DA625C522195700900455FFB /* Model */,
+				DA625C532195700F00455FFB /* ViewController */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -245,13 +258,37 @@
 		DA0EE1842194296900A3B283 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				DA0EE18D21942D3100A3B283 /* LoginVC.h */,
-				DA0EE18E21942D3100A3B283 /* LoginVC.m */,
-				DA0EE18821942D0C00A3B283 /* LoRegiestVC.h */,
-				DA0EE18921942D0C00A3B283 /* LoRegiestVC.m */,
-				DA0EE18A21942D0C00A3B283 /* LoRegiestVC.xib */,
+				DA0EE18D21942D3100A3B283 /* WeChatLoginVC.h */,
+				DA0EE18E21942D3100A3B283 /* WeChatLoginVC.m */,
+				DA0EE18821942D0C00A3B283 /* LoSendMsgVC.h */,
+				DA0EE18921942D0C00A3B283 /* LoSendMsgVC.m */,
+				DA625C5421957A4000455FFB /* LoSendMsgVC.xib */,
+				DA625C4A2195635300455FFB /* LoginVC.h */,
+				DA625C4B2195635300455FFB /* LoginVC.m */,
+				DA625C4C2195635300455FFB /* LoginVC.xib */,
+				DA625C562195847800455FFB /* LoQuestionVC.h */,
+				DA625C572195847800455FFB /* LoQuestionVC.m */,
+				DA625C582195847800455FFB /* LoQuestionVC.xib */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		DA625C522195700900455FFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA625C4F21956FFB00455FFB /* MyUserModel.h */,
+				DA625C5021956FFB00455FFB /* MyUserModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DA625C532195700F00455FFB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DA02C5B421904C92006B7643 /* MyVC.h */,
+				DA02C5B521904C92006B7643 /* MyVC.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		DAD03F13218BEFF800B92B8B = {
@@ -315,7 +352,6 @@
 			isa = PBXGroup;
 			children = (
 				DAD03F3C218BF9F300B92B8B /* ViewController */,
-				DAD03F3B218BF9EE00B92B8B /* View */,
 				DAD03F3A218BF9E900B92B8B /* Model */,
 			);
 			path = BaseClass;
@@ -332,13 +368,6 @@
 				DAD03FB5218C278200B92B8B /* GYScreen.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		DAD03F3B218BF9EE00B92B8B /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		DAD03F3C218BF9F300B92B8B /* ViewController */ = {
@@ -670,10 +699,12 @@
 			files = (
 				DAD03F2C218BEFF900B92B8B /* LaunchScreen.storyboard in Resources */,
 				DAD03F9D218C0AAF00B92B8B /* HMScanner.bundle in Resources */,
+				DA625C5521957A4000455FFB /* LoSendMsgVC.xib in Resources */,
 				DAD03F29218BEFF900B92B8B /* Assets.xcassets in Resources */,
 				DAD03F81218C0A8A00B92B8B /* IDInfoViewController.xib in Resources */,
-				DA0EE18C21942D0C00A3B283 /* LoRegiestVC.xib in Resources */,
+				DA625C5A2195847800455FFB /* LoQuestionVC.xib in Resources */,
 				DAD03F87218C0A8A00B92B8B /* zocr0.lib in Resources */,
+				DA625C4E2195635300455FFB /* LoginVC.xib in Resources */,
 				DAD03F85218C0A8A00B92B8B /* IDAuthViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -744,10 +775,11 @@
 				DAD03F2F218BEFF900B92B8B /* main.m in Sources */,
 				DAD03FB4218C220F00B92B8B /* UIAlertController+TT.m in Sources */,
 				DAD03F9E218C0AAF00B92B8B /* HMScanerCardViewController.m in Sources */,
-				DA0EE18B21942D0C00A3B283 /* LoRegiestVC.m in Sources */,
+				DA0EE18B21942D0C00A3B283 /* LoSendMsgVC.m in Sources */,
 				DAD03FD9218C29D800B92B8B /* NSUserDefaults+Category.m in Sources */,
 				DA0EE180219425C700A3B283 /* GYTransition.m in Sources */,
-				DA0EE19021942D3100A3B283 /* LoginVC.m in Sources */,
+				DA0EE19021942D3100A3B283 /* WeChatLoginVC.m in Sources */,
+				DA625C4D2195635300455FFB /* LoginVC.m in Sources */,
 				DAD03F83218C0A8A00B92B8B /* AVCaptureViewController.m in Sources */,
 				DAD03F3F218BFA3D00B92B8B /* BaTabBarController.m in Sources */,
 				DAD03F21218BEFF800B92B8B /* AppDelegate.m in Sources */,
@@ -756,6 +788,7 @@
 				DAD03F5B218C0A2E00B92B8B /* GYHUD.m in Sources */,
 				DAD03F7F218C0A8A00B92B8B /* UIAlertController+Extend.m in Sources */,
 				DA02C5B921904FE3006B7643 /* File.swift in Sources */,
+				DA625C592195847800455FFB /* LoQuestionVC.m in Sources */,
 				DAD03FBA218C278200B92B8B /* GYCommon.m in Sources */,
 				DAD03FE2218C3E4A00B92B8B /* UIDevice+GY.m in Sources */,
 				DAD03FD1218C289400B92B8B /* UIScrollView+GY.m in Sources */,
@@ -769,6 +802,7 @@
 				DAD03F80218C0A8A00B92B8B /* UIImage+Extend.m in Sources */,
 				DAD03FD2218C289400B92B8B /* UICollectionView+GY.m in Sources */,
 				DAD03FB9218C278200B92B8B /* GYScreen.m in Sources */,
+				DA625C5121956FFB00455FFB /* MyUserModel.m in Sources */,
 				DAD03F84218C0A8A00B92B8B /* IDAuthViewController.m in Sources */,
 				DAD03FD4218C289400B92B8B /* UITableView+GY.m in Sources */,
 				DAD03F9F218C0AAF00B92B8B /* HMScannerController.m in Sources */,

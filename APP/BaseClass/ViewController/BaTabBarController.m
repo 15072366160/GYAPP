@@ -45,17 +45,11 @@
     self.viewControllers = viewControllers;
     
     [self.tabBar setShadowImage:[UIImage jk_imageWithColor:LINE_COLOR_0]];
-    [self.tabBar setBackgroundImage:[UIImage jk_imageWithColor:BACKGROUND_COLOR]];
+    [self.tabBar setBackgroundImage:[UIImage jk_imageWithColor:WHITE_COLOR]];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)dealloc{
+    NSLog(@"%@ 已经销毁",NSStringFromClass([self class]));
 }
-*/
 
 @end

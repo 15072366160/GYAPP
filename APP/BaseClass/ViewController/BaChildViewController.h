@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BaChildViewController : BaViewController
 
+@property (nonatomic,strong) UIButton *questionBtn;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -20,4 +20,11 @@ typedef NS_ENUM(NSUInteger, PayMode) {
     PayModeQQPay        // QQ钱包支付
 };
 
+#pragma mark -- 找回密码 和 注册
+typedef NS_ENUM(NSUInteger, FindRegiestMode) {
+    FindRegiestModeFind = 0,   // 找回密码
+    FindRegiestModeRegiest,    // 注册
+};
+
+
 #endif /* HeaderEnum.h */

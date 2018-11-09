@@ -1,26 +1,24 @@
 //
-//  LoginVC.m
+//  LoQuestionVC.m
 //  APP
 //
 //  Created by Paul on 2018/11/9.
 //  Copyright © 2018 Paul. All rights reserved.
 //
 
-#import "LoginVC.h"
+#import "LoQuestionVC.h"
 
-@interface LoginVC ()
+@interface LoQuestionVC ()
 
 @end
 
-@implementation LoginVC
+@implementation LoQuestionVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"登录";
+    self.title = @"遇到问题";
     
-    // 遇到问题
-    [self.view addSubview:self.questionBtn];
 }
 
 

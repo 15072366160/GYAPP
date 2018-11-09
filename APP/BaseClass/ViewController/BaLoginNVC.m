@@ -28,7 +28,6 @@
         UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
         _effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
         _effectView.frame = [UIScreen mainScreen].bounds;
-        [self.view addSubview:_effectView];
     }
     return _effectView;
 }
@@ -46,28 +45,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view insertSubview:self.effectView atIndex:0];
-    
-    
 }
 
-//- (void)viewWillAppear:(BOOL)animated{
-//    [super viewWillAppear:animated];
-//
-//    // 添加高斯模糊
-//    UIViewController *vc = self.presentingViewController;
-//    [vc.view addSubview:self.effectView];
-//    // 调整位置
-//    UIWindow *window = [UIApplication sharedApplication].delegate.window;
-//    CGRect rect = [self.effectView convertRect: self.effectView.bounds toView:window];
-//    self.effectView.frame = CGRectMake(-rect.origin.x, -rect.origin.y, rect.size.width, rect.size.height);
-//}
-//
-//- (void)viewDidDisappear:(BOOL)animated{
-//    [super viewDidDisappear:animated];
-//
-//    [self.effectView removeFromSuperview];
-//}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+
+    // 添加高斯模糊
+    UIViewController *vc = self.presentingViewController;
+    [vc.view addSubview:self.effectView];
+    // 调整位置
+    UIWindow *window = [UIApplication sharedApplication].delegate.window;
+    CGRect rect = [self.effectView convertRect: self.effectView.bounds toView:window];
+    self.effectView.frame = CGRectMake(-rect.origin.x, -rect.origin.y, rect.size.width, rect.size.height);
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+
+   [self.view insertSubview:self.effectView atIndex:0];
+}
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     [super pushViewController:viewController animated:animated];

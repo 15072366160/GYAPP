@@ -1,5 +1,5 @@
 //
-//  LoginVC.h
+//  LoQuestionVC.h
 //  APP
 //
 //  Created by Paul on 2018/11/9.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LoginVC : BaChildViewController
+@interface LoQuestionVC : BaChildViewController
 
 @end
 

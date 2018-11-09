@@ -20,4 +20,8 @@
     self.view.backgroundColor = BACKGROUND_COLOR;
 }
 
+- (void)dealloc{
+    NSLog(@"%@ 已经销毁",NSStringFromClass([self class]));
+}
+
 @end

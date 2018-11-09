@@ -21,8 +21,11 @@
     
     UIImage *img = [UIImage imageGradualOblique:HEX_COLOR(@"FF652D") endColor:HEX_COLOR(@"FF2424") size:CGSizeMake(SCREEN_WIDTH, [GYScreen shared].navBarH)];
     [self.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
-    [self.navigationBar setShadowImage:[UIImage jk_imageWithColor:LINE_COLOR_0]];
+    [self.navigationBar setShadowImage:[UIImage jk_imageWithColor:CLEAR_COLOR]];
 }
 
+- (void)dealloc{
+    NSLog(@"%@ 已经销毁",NSStringFromClass([self class]));
+}
 
 @end
