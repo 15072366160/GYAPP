@@ -17,8 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
+
     
     
 }
@@ -36,7 +35,7 @@
 }
 
 - (void)questionBtnAction{
-    LoQuestionVC *vc = [[LoQuestionVC alloc] initWithNibName:@"LoQuestionVC" bundle:nil];
+    LoQuestionVC *vc = [[LoQuestionVC alloc] init];
     [self push:vc];
 }
 

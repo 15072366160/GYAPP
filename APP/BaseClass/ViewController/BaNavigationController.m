@@ -18,10 +18,11 @@
     [super viewDidLoad];
     
     self.navigationBar.barStyle = UIBarStyleBlack;
+    [self.navigationBar setTintColor:WHITE_COLOR];
+    self.navigationBar.barTintColor = HEX_COLOR(@"303439");
+//    [self.navigationBar setShadowImage:[UIImage jk_imageWithColor:CLEAR_COLOR]];
     
-    UIImage *img = [UIImage imageGradualOblique:HEX_COLOR(@"FF652D") endColor:HEX_COLOR(@"FF2424") size:CGSizeMake(SCREEN_WIDTH, [GYScreen shared].navBarH)];
-    [self.navigationBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
-    [self.navigationBar setShadowImage:[UIImage jk_imageWithColor:CLEAR_COLOR]];
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
 }
 
 - (void)dealloc{

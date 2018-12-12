@@ -254,5 +254,9 @@
     
 }
 
++ (instancetype)loadWithNibName:(NSString *)nibName{
+    return [[NSBundle mainBundle] loadNibNamed:nibName owner:nil options:nil].firstObject;
+}
+
 @end
 

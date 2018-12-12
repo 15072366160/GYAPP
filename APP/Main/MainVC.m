@@ -8,6 +8,9 @@
 
 #import "MainVC.h"
 
+
+#import "AFHTTPSessionManager.h"
+
 @interface MainVC ()
 
 
@@ -18,19 +21,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [btn setTitle:@"登录" forState:UIControlStateNormal];
-//    UIImage *image = [UIImage imageGradualOblique:HEX_COLOR(@"#ff9966") endColor:HEX_COLOR(@"#ff5e62") size:CGSizeMake(50, 200)];
-//    [btn setBackgroundImage:image forState:UIControlStateNormal];
-//    [btn addTarget:self action:@selector(checkLogin) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:btn];
-//    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerX.mas_equalTo(self.view.mas_centerX);
-//        make.centerY.mas_equalTo(self.view.mas_centerY);
-//        make.width.mas_equalTo(200);
-//        make.height.mas_equalTo(50);
-//    }];
+    
 
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [super touchesBegan:touches withEvent:event];
+    
+    NSString *url = @"http://v.juhe.cn/exp/index?key=key&com=sf&no=575677355677";
+    
+    //开始请求数据
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    AFHTTPRequestSerializer *requset = [AFHTTPRequestSerializer serializer];
+    requset.stringEncoding = NSUTF8StringEncoding;
+    requset.timeoutInterval = 5.0;
+    manager.requestSerializer = requset;
+    
+    AFJSONResponseSerializer *response = [AFJSONResponseSerializer serializer];
+    response.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"image/jpeg", @"image/png", @"application/octet-stream", @"text/json",@"text/plain", @"text/javascript", nil];
+    manager.responseSerializer = response;
+    
+    if ([url jk_isContainChinese]) {
+        url = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    }
+    [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 @end

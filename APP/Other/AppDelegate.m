@@ -12,11 +12,9 @@
 // 网络
 #import "AFHTTPSessionManager.h"
 
-// 微信
-#import "WXApi.h"
 #import "APP-Bridging-Header.h"
 
-@interface AppDelegate ()<WXApiDelegate>
+@interface AppDelegate ()
 
 @end
 
@@ -33,8 +31,6 @@
     [GYHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
     [GYHUD setDefaultAnimationType:SVProgressHUDAnimationTypeNative];
     
-    // 微信注册
-    [WXApi registerApp:AppID];
     
     // 检测网络
     [self checkNetwork];
@@ -52,50 +48,6 @@
     self.window.rootViewController = tab;
 }
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-    
-    if ([url.scheme isEqualToString:AppID]) {
-        return [WXApi handleOpenURL:url delegate:self];
-    }
-    return true;
-}
-
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
-    
-    if ([url.scheme isEqualToString:AppID]) {
-        return [WXApi handleOpenURL:url delegate:self];
-    }
-    return true;
-}
-
--(void) onReq:(BaseReq*)req{
-    
-}
-
--(void) onResp:(BaseResp*)resp{
-     if ([resp isKindOfClass:[SendAuthResp class]]) {
-         
-         SendAuthResp *temp = (SendAuthResp *)resp;
-         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-             [dict addValue:AppID key:@"appid"];
-             [dict addValue:AppSecret key:@"secret"];
-             [dict addValue:temp.code key:@"code"];
-             [dict addValue:@"authorization_code" key:@"grant_type"];
-         [GYNetworking requestMode:NetModeGET header:nil url:@"https://api.weixin.qq.com/sns/oauth2/access_token" params:dict success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable data) {
-             
-             GYLog(@"请求access的data = %@", data);
-             NSDictionary *dict = (NSDictionary *)data;
-             [NSUserDefaults addValue:dict[WX_ACCESS_TOKEN] key:WX_ACCESS_TOKEN];
-             [NSUserDefaults addValue:dict[WX_OPEN_ID] key:WX_OPEN_ID];
-             [NSUserDefaults addValue:dict[WX_REFRESH_TOKEN] key:WX_REFRESH_TOKEN];
-
-             [GYNOTI postNotificationName:NOTI_WX_LOGIN object:nil];
-         } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-             [GYHUD _showErrorWithStatus:@"网络未连接，请检查网络！"];
-         }];
-     }
-}
-
 #pragma mark -- 检测网络
 - (void)checkNetwork{
     AFNetworkReachabilityManager *manager = [AFNetworkReachabilityManager sharedManager];
@@ -106,7 +58,7 @@
                 [GYHUD _showInfoWithStatus:@"未知网络"];
                 break;
             case AFNetworkReachabilityStatusNotReachable:
-                [GYHUD _showErrorWithStatus:@"未检测到网络连接"];
+                [GYHUD _showErrorWithStatus:@"网络已连接"];
                 break;
             case AFNetworkReachabilityStatusReachableViaWWAN:
                 [GYHUD _showInfoWithStatus:@"当前使用移动流量"];

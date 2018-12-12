@@ -68,7 +68,7 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     [super pushViewController:viewController animated:animated];
     
-    [self setNavigationBarHidden:false animated:true];
+    [self setNavigationBarHidden:false animated:animated];
 }
 
 - (void)dealloc{

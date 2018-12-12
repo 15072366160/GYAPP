@@ -153,4 +153,27 @@
     return [addresses count] ? addresses : nil;
 }
 
+- (BOOL)isNumber{
+    NSScanner *scan = [NSScanner scannerWithString:self];
+    int val = 0;
+    return [scan scanInt:&val] && scan.isAtEnd;
+}
+
+- (BOOL)isValidString{
+    if ([self isKindOfClass:[NSNull class]]) {
+        return false;
+    }
+    return self.length > 0 ? true : false;
+}
+
+- (NSString *)removeSpace{
+    return [self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+}
+
+- (BOOL)isPhone{
+    NSString *mobileRegex = @"^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\\d{8}$";
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",mobileRegex];
+    return [pre evaluateWithObject:self];
+}
+
 @end

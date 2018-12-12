@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "22BFBD82AC53A48DD67541941167F1DA"
+               BlueprintIdentifier = "D1731EC758F0857BA8DDB06C4F06B2E2"
                BlueprintName = "HJTabViewController"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libHJTabViewController.a">

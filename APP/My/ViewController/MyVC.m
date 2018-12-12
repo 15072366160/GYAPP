@@ -8,19 +8,41 @@
 
 #import "MyVC.h"
 #import "BaLoginNVC.h"
-#import "WeChatLoginVC.h"
+#import "MaLoginVC.h"
+#import "MySetupVC.h"
+#import "MyHeaderView.h"
+#import "MyUserModel.h"
 
-@interface MyVC ()<UITableViewDelegate,UITableViewDataSource>
+@interface MyTableView : UITableView
 
-@property (nonatomic,strong) UITableView *tableView;
+@end
+
+@implementation MyTableView
+
+- (void)drawRect:(CGRect)rect{
+    [super drawRect:rect];
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [MAIN_COLOR set];
+    CGFloat height = -self.contentOffset.y;
+    CGContextAddRect(context, CGRectMake(rect.origin.x, rect.origin.y, rect.size.width, height));
+    CGContextDrawPath(context, kCGPathFillStroke);
+}
+
+@end
+
+@interface MyVC ()<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
+
+@property (nonatomic,strong) MyTableView *tableView;
+@property (nonatomic,strong) MyHeaderView *headerView;
 
 @end
 
 @implementation MyVC
 
-- (UITableView *)tableView{
+- (MyTableView *)tableView{
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+        _tableView = [[MyTableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
         _tableView.backgroundColor = BACKGROUND_COLOR;
         _tableView.delegate = self;
         _tableView.dataSource = self;
@@ -29,8 +51,35 @@
     return _tableView;
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+
+    [self.navigationController setNavigationBarHidden:true animated:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+
+    [self.navigationController setNavigationBarHidden:false animated:animated];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // 添加tableView
+    [self.view addSubview:self.tableView];
+    ADJUSTINSETS_NO(self.tableView);
+    
+    // headerView
+    self.headerView = [MyHeaderView loadWithNibName:@"MyHeaderView"];
+    self.tableView.tableHeaderView = self.headerView ;
+    
+    MyUserModel *user = [MyUserModel user];
+    self.headerView.nameLabel.text = @"Paul97309";
+    self.headerView.accountLabel.text = @"账号：15072366160";
+    
+    [self.headerView.imgView sd_setImageWithURL:[NSURL URLWithString:user.headimgurl] placeholderImage:[UIImage imageNamed:@"头像"]];
+    [self.headerView.btn addTarget:self action:@selector(loginAction)];
     
 //    UIImageView *imgView = [[UIImageView alloc] initWithFrame:SCREEN_BOUNDS];
 //    imgView.contentMode = UIViewContentModeScaleAspectFill;
@@ -50,14 +99,6 @@
 //        make.height.mas_equalTo(50);
 //    }];
     
-    [self.view addSubview:self.tableView];
-}
-
-- (void)action{
-    
-    WeChatLoginVC *vc = [[WeChatLoginVC alloc] init];
-    BaLoginNVC *nvc = [[BaLoginNVC alloc] initWithRootViewController:vc];
-    [self present:nvc];
 }
 
 #pragma mark -- UITableViewDataSource
@@ -76,5 +117,36 @@
 }
 
 #pragma mark -- UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    switch (indexPath.row) {
+        case 0: [self loginAction];
+            break;
+        case 1: [self setupAction];
+            break;
+            
+        default:
+            break;
+    }
+}
+
+// 登录
+- (void)loginAction{
+    MaLoginVC *vc = [[MaLoginVC alloc] init];
+    BaLoginNVC *nvc = [[BaLoginNVC alloc] initWithRootViewController:vc];
+    [self present:nvc];
+}
+
+// 设置
+- (void)setupAction{
+    MySetupVC *vc = [[MySetupVC alloc] initWithNibName:@"MySetupVC" bundle:nil];
+    vc.hidesBottomBarWhenPushed = true;
+    [self push:vc];
+}
+
+#pragma mark -- UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+    [self.tableView setNeedsDisplay];
+}
 
 @end

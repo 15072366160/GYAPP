@@ -26,6 +26,27 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString *)getLocalIP:(BOOL)preferIPv4;
 
+/**
+ 是不是数字
+ **/
+- (BOOL)isNumber;
+
+/**
+ 是不是有效字符串
+ **/
+- (BOOL)isValidString;
+
+/**
+ 去除前后空格
+ **/
+- (NSString *)removeSpace;
+
+/**
+ 是不是手机号
+ @return Bool
+ */
+- (BOOL)isPhone;
+
 @end
 
 NS_ASSUME_NONNULL_END

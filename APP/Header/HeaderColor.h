@@ -22,7 +22,7 @@
 #define RGBACOLOR(r, g, b, a)   [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
 
 // 上线颜色
-#define MAIN_COLOR             HEX_COLOR(@"fa7d0f")
+#define MAIN_COLOR             HEX_COLOR(@"42a1f3")
 #define MAIN_COLOR_Alp(alp)    RGB_COLOR(250, 125, 15, alp)
 
 #define BLACK_A                HEX_COLOR(@"323232")

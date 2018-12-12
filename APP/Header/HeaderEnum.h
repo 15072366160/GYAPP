@@ -22,8 +22,8 @@ typedef NS_ENUM(NSUInteger, PayMode) {
 
 #pragma mark -- 找回密码 和 注册
 typedef NS_ENUM(NSUInteger, FindRegiestMode) {
-    FindRegiestModeFind = 0,   // 找回密码
-    FindRegiestModeRegiest,    // 注册
+    FindRegiestModeRegiest = 0,    // 注册
+    FindRegiestModeFind,   // 找回密码
 };
 
 

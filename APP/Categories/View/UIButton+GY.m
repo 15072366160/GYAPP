@@ -73,4 +73,18 @@
     
 }
 
+- (void)addTarget:(nullable id)target action:(SEL)action{
+    [self addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+}
+
++(UIButton *)buttonWithTarget:(id)target action:(SEL)action title:(NSString *)title{
+    // 注册或者登录
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setBackgroundColor:MAIN_COLOR];
+    [btn setTitle:title forState:0];
+    btn.titleLabel.font = [UIFont systemFontOfSize:18 weight:UIFontWeightMedium];
+    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return btn;
+}
+
 @end

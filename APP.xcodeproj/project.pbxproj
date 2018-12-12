@@ -11,16 +11,20 @@
 		DA02C5B621904C92006B7643 /* MyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA02C5B521904C92006B7643 /* MyVC.m */; };
 		DA02C5B921904FE3006B7643 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA02C5B821904FE3006B7643 /* File.swift */; };
 		DA067A4E2191503400BAD864 /* NSString+GY.m in Sources */ = {isa = PBXBuildFile; fileRef = DA067A4D2191503400BAD864 /* NSString+GY.m */; };
+		DA0D51B82196C20E00E364A0 /* MySetupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0D51B62196C20E00E364A0 /* MySetupVC.m */; };
+		DA0D51B92196C20E00E364A0 /* MySetupVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA0D51B72196C20E00E364A0 /* MySetupVC.xib */; };
+		DA0D51BD2196CCD000E364A0 /* MyHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0D51BC2196CCD000E364A0 /* MyHeaderView.m */; };
+		DA0D51BF2196CCE000E364A0 /* MyHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA0D51BE2196CCE000E364A0 /* MyHeaderView.xib */; };
 		DA0EE180219425C700A3B283 /* GYTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0EE17E219425C600A3B283 /* GYTransition.m */; };
 		DA0EE183219425F500A3B283 /* BaLoginNVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0EE182219425F500A3B283 /* BaLoginNVC.m */; };
 		DA0EE18B21942D0C00A3B283 /* LoSendMsgVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0EE18921942D0C00A3B283 /* LoSendMsgVC.m */; };
-		DA0EE19021942D3100A3B283 /* WeChatLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0EE18E21942D3100A3B283 /* WeChatLoginVC.m */; };
+		DA0EE19021942D3100A3B283 /* MaLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0EE18E21942D3100A3B283 /* MaLoginVC.m */; };
+		DA197ABE21C0B74C0072CD53 /* SecVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA197ABD21C0B74C0072CD53 /* SecVC.m */; };
+		DA197AC121C0B7600072CD53 /* ThiVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA197AC021C0B7600072CD53 /* ThiVC.m */; };
 		DA625C4D2195635300455FFB /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA625C4B2195635300455FFB /* LoginVC.m */; };
-		DA625C4E2195635300455FFB /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA625C4C2195635300455FFB /* LoginVC.xib */; };
 		DA625C5121956FFB00455FFB /* MyUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA625C5021956FFB00455FFB /* MyUserModel.m */; };
-		DA625C5521957A4000455FFB /* LoSendMsgVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA625C5421957A4000455FFB /* LoSendMsgVC.xib */; };
 		DA625C592195847800455FFB /* LoQuestionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA625C572195847800455FFB /* LoQuestionVC.m */; };
-		DA625C5A2195847800455FFB /* LoQuestionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA625C582195847800455FFB /* LoQuestionVC.xib */; };
+		DAAA3B7C21C101A100DACC83 /* LoUnionView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAA3B7B21C101A100DACC83 /* LoUnionView.m */; };
 		DAD03F21218BEFF800B92B8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD03F20218BEFF800B92B8B /* AppDelegate.m */; };
 		DAD03F24218BEFF800B92B8B /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD03F23218BEFF800B92B8B /* MainVC.m */; };
 		DAD03F29218BEFF900B92B8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAD03F28218BEFF900B92B8B /* Assets.xcassets */; };
@@ -85,23 +89,32 @@
 		DA02C5B821904FE3006B7643 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		DA067A4C2191503400BAD864 /* NSString+GY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+GY.h"; sourceTree = "<group>"; };
 		DA067A4D2191503400BAD864 /* NSString+GY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+GY.m"; sourceTree = "<group>"; };
+		DA0D51B52196C20E00E364A0 /* MySetupVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySetupVC.h; sourceTree = "<group>"; };
+		DA0D51B62196C20E00E364A0 /* MySetupVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySetupVC.m; sourceTree = "<group>"; };
+		DA0D51B72196C20E00E364A0 /* MySetupVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MySetupVC.xib; sourceTree = "<group>"; };
+		DA0D51BB2196CCD000E364A0 /* MyHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyHeaderView.h; sourceTree = "<group>"; };
+		DA0D51BC2196CCD000E364A0 /* MyHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyHeaderView.m; sourceTree = "<group>"; };
+		DA0D51BE2196CCE000E364A0 /* MyHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyHeaderView.xib; sourceTree = "<group>"; };
 		DA0EE17E219425C600A3B283 /* GYTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYTransition.m; sourceTree = "<group>"; };
 		DA0EE17F219425C700A3B283 /* GYTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYTransition.h; sourceTree = "<group>"; };
 		DA0EE181219425F500A3B283 /* BaLoginNVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaLoginNVC.h; sourceTree = "<group>"; };
 		DA0EE182219425F500A3B283 /* BaLoginNVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaLoginNVC.m; sourceTree = "<group>"; };
 		DA0EE18821942D0C00A3B283 /* LoSendMsgVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoSendMsgVC.h; sourceTree = "<group>"; };
 		DA0EE18921942D0C00A3B283 /* LoSendMsgVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoSendMsgVC.m; sourceTree = "<group>"; };
-		DA0EE18D21942D3100A3B283 /* WeChatLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeChatLoginVC.h; sourceTree = "<group>"; };
-		DA0EE18E21942D3100A3B283 /* WeChatLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeChatLoginVC.m; sourceTree = "<group>"; };
+		DA0EE18D21942D3100A3B283 /* MaLoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MaLoginVC.h; sourceTree = "<group>"; };
+		DA0EE18E21942D3100A3B283 /* MaLoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MaLoginVC.m; sourceTree = "<group>"; };
+		DA197ABC21C0B74C0072CD53 /* SecVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecVC.h; sourceTree = "<group>"; };
+		DA197ABD21C0B74C0072CD53 /* SecVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecVC.m; sourceTree = "<group>"; };
+		DA197ABF21C0B7600072CD53 /* ThiVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThiVC.h; sourceTree = "<group>"; };
+		DA197AC021C0B7600072CD53 /* ThiVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThiVC.m; sourceTree = "<group>"; };
 		DA625C4A2195635300455FFB /* LoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		DA625C4B2195635300455FFB /* LoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
-		DA625C4C2195635300455FFB /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		DA625C4F21956FFB00455FFB /* MyUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyUserModel.h; sourceTree = "<group>"; };
 		DA625C5021956FFB00455FFB /* MyUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyUserModel.m; sourceTree = "<group>"; };
-		DA625C5421957A4000455FFB /* LoSendMsgVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoSendMsgVC.xib; sourceTree = "<group>"; };
 		DA625C562195847800455FFB /* LoQuestionVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoQuestionVC.h; sourceTree = "<group>"; };
 		DA625C572195847800455FFB /* LoQuestionVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoQuestionVC.m; sourceTree = "<group>"; };
-		DA625C582195847800455FFB /* LoQuestionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoQuestionVC.xib; sourceTree = "<group>"; };
+		DAAA3B7A21C101A100DACC83 /* LoUnionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoUnionView.h; sourceTree = "<group>"; };
+		DAAA3B7B21C101A100DACC83 /* LoUnionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoUnionView.m; sourceTree = "<group>"; };
 		DAD03F1C218BEFF800B92B8B /* APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAD03F1F218BEFF800B92B8B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DAD03F20218BEFF800B92B8B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -250,27 +263,47 @@
 			isa = PBXGroup;
 			children = (
 				DA625C522195700900455FFB /* Model */,
+				DA0D51BA2196CC9C00E364A0 /* View */,
 				DA625C532195700F00455FFB /* ViewController */,
 			);
 			path = My;
 			sourceTree = "<group>";
 		};
+		DA0D51BA2196CC9C00E364A0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DA0D51BB2196CCD000E364A0 /* MyHeaderView.h */,
+				DA0D51BC2196CCD000E364A0 /* MyHeaderView.m */,
+				DA0D51BE2196CCE000E364A0 /* MyHeaderView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DA0EE1842194296900A3B283 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				DA0EE18D21942D3100A3B283 /* WeChatLoginVC.h */,
-				DA0EE18E21942D3100A3B283 /* WeChatLoginVC.m */,
-				DA0EE18821942D0C00A3B283 /* LoSendMsgVC.h */,
-				DA0EE18921942D0C00A3B283 /* LoSendMsgVC.m */,
-				DA625C5421957A4000455FFB /* LoSendMsgVC.xib */,
-				DA625C4A2195635300455FFB /* LoginVC.h */,
-				DA625C4B2195635300455FFB /* LoginVC.m */,
-				DA625C4C2195635300455FFB /* LoginVC.xib */,
-				DA625C562195847800455FFB /* LoQuestionVC.h */,
-				DA625C572195847800455FFB /* LoQuestionVC.m */,
-				DA625C582195847800455FFB /* LoQuestionVC.xib */,
+				DAAA3B7821C1012200DACC83 /* View */,
+				DAAA3B7921C1013500DACC83 /* ViewController */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		DA197ABA21C0B5950072CD53 /* Second */ = {
+			isa = PBXGroup;
+			children = (
+				DA197ABC21C0B74C0072CD53 /* SecVC.h */,
+				DA197ABD21C0B74C0072CD53 /* SecVC.m */,
+			);
+			path = Second;
+			sourceTree = "<group>";
+		};
+		DA197ABB21C0B5EC0072CD53 /* Third */ = {
+			isa = PBXGroup;
+			children = (
+				DA197ABF21C0B7600072CD53 /* ThiVC.h */,
+				DA197AC021C0B7600072CD53 /* ThiVC.m */,
+			);
+			path = Third;
 			sourceTree = "<group>";
 		};
 		DA625C522195700900455FFB /* Model */ = {
@@ -287,6 +320,33 @@
 			children = (
 				DA02C5B421904C92006B7643 /* MyVC.h */,
 				DA02C5B521904C92006B7643 /* MyVC.m */,
+				DA0D51B52196C20E00E364A0 /* MySetupVC.h */,
+				DA0D51B62196C20E00E364A0 /* MySetupVC.m */,
+				DA0D51B72196C20E00E364A0 /* MySetupVC.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DAAA3B7821C1012200DACC83 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAAA3B7A21C101A100DACC83 /* LoUnionView.h */,
+				DAAA3B7B21C101A100DACC83 /* LoUnionView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DAAA3B7921C1013500DACC83 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DA0EE18D21942D3100A3B283 /* MaLoginVC.h */,
+				DA0EE18E21942D3100A3B283 /* MaLoginVC.m */,
+				DA625C4A2195635300455FFB /* LoginVC.h */,
+				DA625C4B2195635300455FFB /* LoginVC.m */,
+				DA0EE18821942D0C00A3B283 /* LoSendMsgVC.h */,
+				DA0EE18921942D0C00A3B283 /* LoSendMsgVC.m */,
+				DA625C562195847800455FFB /* LoQuestionVC.h */,
+				DA625C572195847800455FFB /* LoQuestionVC.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -313,11 +373,13 @@
 			isa = PBXGroup;
 			children = (
 				DAD03F4D218C00A100B92B8B /* Header */,
-				DAD03FAB218C21E400B92B8B /* Categories */,
 				DAD03F4C218C005100B92B8B /* Lib */,
+				DAD03FAB218C21E400B92B8B /* Categories */,
 				DAD03F39218BF9DA00B92B8B /* BaseClass */,
 				DA0EE1842194296900A3B283 /* Login */,
 				DAD03F36218BF06200B92B8B /* Main */,
+				DA197ABA21C0B5950072CD53 /* Second */,
+				DA197ABB21C0B5EC0072CD53 /* Third */,
 				DA02C5B321904C6A006B7643 /* My */,
 				DAD03F35218BF03300B92B8B /* Other */,
 			);
@@ -697,14 +759,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0D51B92196C20E00E364A0 /* MySetupVC.xib in Resources */,
 				DAD03F2C218BEFF900B92B8B /* LaunchScreen.storyboard in Resources */,
 				DAD03F9D218C0AAF00B92B8B /* HMScanner.bundle in Resources */,
-				DA625C5521957A4000455FFB /* LoSendMsgVC.xib in Resources */,
+				DA0D51BF2196CCE000E364A0 /* MyHeaderView.xib in Resources */,
 				DAD03F29218BEFF900B92B8B /* Assets.xcassets in Resources */,
 				DAD03F81218C0A8A00B92B8B /* IDInfoViewController.xib in Resources */,
-				DA625C5A2195847800455FFB /* LoQuestionVC.xib in Resources */,
 				DAD03F87218C0A8A00B92B8B /* zocr0.lib in Resources */,
-				DA625C4E2195635300455FFB /* LoginVC.xib in Resources */,
 				DAD03F85218C0A8A00B92B8B /* IDAuthViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -763,22 +824,26 @@
 			files = (
 				DAD03F4B218BFAC800B92B8B /* BaChildViewController.m in Sources */,
 				DAD03F24218BEFF800B92B8B /* MainVC.m in Sources */,
+				DA197ABE21C0B74C0072CD53 /* SecVC.m in Sources */,
 				DAD03FD6218C289400B92B8B /* UITextView+ZWPlaceHolder.m in Sources */,
 				DAD03F42218BFA5200B92B8B /* BaNavigationController.m in Sources */,
 				DAD03FDF218C2AC500B92B8B /* StartUpVC.m in Sources */,
 				DAD03F48218BFA9600B92B8B /* BaViewController.m in Sources */,
+				DA0D51B82196C20E00E364A0 /* MySetupVC.m in Sources */,
 				DAD03FD5218C289400B92B8B /* UIButton+GY.m in Sources */,
 				DAD03FB3218C220F00B92B8B /* UIViewController+GY.m in Sources */,
+				DA0D51BD2196CCD000E364A0 /* MyHeaderView.m in Sources */,
 				DAD03F9A218C0AAF00B92B8B /* HMScannerMaskView.m in Sources */,
 				DAD03F82218C0A8A00B92B8B /* IDInfoViewController.m in Sources */,
 				DAD03F89218C0A8A00B92B8B /* LHSIDCardScaningView.m in Sources */,
 				DAD03F2F218BEFF900B92B8B /* main.m in Sources */,
+				DAAA3B7C21C101A100DACC83 /* LoUnionView.m in Sources */,
 				DAD03FB4218C220F00B92B8B /* UIAlertController+TT.m in Sources */,
 				DAD03F9E218C0AAF00B92B8B /* HMScanerCardViewController.m in Sources */,
 				DA0EE18B21942D0C00A3B283 /* LoSendMsgVC.m in Sources */,
 				DAD03FD9218C29D800B92B8B /* NSUserDefaults+Category.m in Sources */,
 				DA0EE180219425C700A3B283 /* GYTransition.m in Sources */,
-				DA0EE19021942D3100A3B283 /* WeChatLoginVC.m in Sources */,
+				DA0EE19021942D3100A3B283 /* MaLoginVC.m in Sources */,
 				DA625C4D2195635300455FFB /* LoginVC.m in Sources */,
 				DAD03F83218C0A8A00B92B8B /* AVCaptureViewController.m in Sources */,
 				DAD03F3F218BFA3D00B92B8B /* BaTabBarController.m in Sources */,
@@ -786,6 +851,7 @@
 				DAD03FD3218C289400B92B8B /* UIBarButtonItem+GY.m in Sources */,
 				DAD03FE9218C5F8000B92B8B /* UIImage+GY.m in Sources */,
 				DAD03F5B218C0A2E00B92B8B /* GYHUD.m in Sources */,
+				DA197AC121C0B7600072CD53 /* ThiVC.m in Sources */,
 				DAD03F7F218C0A8A00B92B8B /* UIAlertController+Extend.m in Sources */,
 				DA02C5B921904FE3006B7643 /* File.swift in Sources */,
 				DA625C592195847800455FFB /* LoQuestionVC.m in Sources */,
@@ -970,7 +1036,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/APP/Lib/IDCard/libexidcard",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.APP.Paul;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ChatApp.Paul;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "APP/Other/APP-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1004,7 +1070,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/APP/Lib/IDCard/libexidcard",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.APP.Paul;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ChatApp.Paul;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "APP/Other/APP-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;

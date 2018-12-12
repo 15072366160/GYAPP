@@ -186,6 +186,11 @@
  */
 - (void)corWithRadius:(CGFloat)radius corners:(UIRectCorner)corners;
 
-
+/**
+ XIB 方式加载
+ @param nibName 类名
+ @return view
+ */
++ (instancetype)loadWithNibName:(NSString *)nibName;
 
 @end

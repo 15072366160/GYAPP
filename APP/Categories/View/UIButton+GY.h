@@ -49,4 +49,22 @@
  **/
 - (void)setTitleColor:(UIColor *)norColor selTitleColor:(UIColor *)selColor;
 
+
+/**
+ 添加默认点击事件
+ @param target target
+ @param action action
+ */
+- (void)addTarget:(nullable id)target action:(SEL)action;
+
+/**
+ 添加默认点击btn
+
+ @param target target
+ @param action action
+ @param title title
+ @return btn
+ */
++(UIButton *)buttonWithTarget:(id)target action:(SEL)action title:(NSString *)title;
+
 @end

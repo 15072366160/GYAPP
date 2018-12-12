@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9131092BD366E8C31A8A3D06A5D74749"
+               BlueprintIdentifier = "C684316173927C6A6C534B7989EC268A"
                BlueprintName = "JYHHHorizontalPagingView"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libJYHHHorizontalPagingView.a">
