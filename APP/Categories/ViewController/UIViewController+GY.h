@@ -84,5 +84,10 @@
 /**右边item点击**/
 - (void)rightItme:(UIBarButtonItem *)rightItem;
 
+/**
+ 切换windows的rootViewController
+ @param rootViewController rootViewController
+ */
+- (void)updateWindowsRootViewController:(UIViewController *)rootViewController;
 
 @end

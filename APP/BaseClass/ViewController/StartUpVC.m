@@ -24,23 +24,23 @@
 
 - (NSArray *)imgs{
     if (!_imgs) {
-        NSString *iphone = nil;
-        if (IS_IPHONE_5S_5SE) {
-            iphone = @"SE";
-        }else if (IS_IPHONE_6_6S_7_8){
-            iphone = @"S";
-        }else if (IS_IPHONE_6P_6SP_7P_8P){
-            iphone = @"P";
-        }else if (IS_IPHONE_X_Xs){
-            iphone = @"X";
-        }else if (IS_IPHONE_Xr_XsMax){
-            iphone = @"X";
-        }else{
-            iphone = @"P";
-        }
+//        NSString *iphone = nil;
+//        if (IS_IPHONE_5S_5SE) {
+//            iphone = @"SE";
+//        }else if (IS_IPHONE_6_6S_7_8){
+//            iphone = @"S";
+//        }else if (IS_IPHONE_6P_6SP_7P_8P){
+//            iphone = @"P";
+//        }else if (IS_IPHONE_X_Xs){
+//            iphone = @"X";
+//        }else if (IS_IPHONE_Xr_XsMax){
+//            iphone = @"X";
+//        }else{
+//            iphone = @"P";
+//        }
         NSMutableArray *imgs = [NSMutableArray array];
         for (int i=0; i<3; i++) {
-            NSString *img = [NSString stringWithFormat:@"引导页_%@_%d",iphone,i+1];
+            NSString *img = [NSString stringWithFormat:@"start_%d",i+1];
             [imgs addObject:img];
         }
         _imgs = imgs;
@@ -60,7 +60,7 @@
     self.advView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
     self.advView.pageControlBottomOffset = 55.0 + [GYScreen shared].tabBarAddH;
     self.advView.pageDotColor = BACKGROUND_COLOR;
-    self.advView.backgroundColor = BACKGROUND_COLOR;
+    self.advView.backgroundColor = NAVBACKGROUND;
     //StartUpVC修改照片
     self.advView.localizationImageNamesGroup = self.imgs;
     [self.view addSubview:self.advView];
@@ -97,10 +97,7 @@
         return;
     }
 
-    [UIView transitionWithView:self.view.window duration:0.7 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-        
-        self.view.window.rootViewController = self.rootVC;
-    } completion:nil];
+    [self updateWindowsRootViewController:self.rootVC];
 }
 
 #pragma mark -- SDCycleScrollViewDelegate

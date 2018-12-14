@@ -52,6 +52,8 @@
 #define BLACK_COLOR            [UIColor blackColor]
 #define ORANGE_COLOR           [UIColor orangeColor]
 
+#define NAVBACKGROUND          HEX_COLOR(@"303439")
+
 #define BLACK_30               RGB_COLOR(0, 0, 0, 0.3)
 
 // 标签色 深蓝   要素

@@ -7,6 +7,8 @@
 //  Copyright © 2017年 ssc. All rights reserved.
 //
 
+#import <AdSupport/AdSupport.h>
+
 #ifndef HeaderDefine_h
 #define HeaderDefine_h
 

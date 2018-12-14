@@ -7,11 +7,19 @@
 //
 
 #import "AppDelegate.h"
+
+// 启动页
+#import "StartUpVC.h"
+// 登录注册
+#import "BaLoginNVC.h"
+#import "MaLoginVC.h"
+// 主页
 #import "BaTabBarController.h"
+// 用户
+#import "MyUserModel.h"
 
 // 网络
 #import "AFHTTPSessionManager.h"
-
 #import "APP-Bridging-Header.h"
 
 @interface AppDelegate ()
@@ -44,8 +52,44 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    BaTabBarController *tab = [[BaTabBarController alloc] init];
-    self.window.rootViewController = tab;
+//    BaTabBarController *tab = [[BaTabBarController alloc] init];
+//    self.window.rootViewController = tab;
+    
+    // 登录页面
+    MaLoginVC *vc = [[MaLoginVC alloc] init];
+    UIViewController *rootVC = [[BaLoginNVC alloc] initWithRootViewController:vc];
+    
+    NSString *isFirst = [NSUserDefaults objectForKey:IsFirstLoginApp];
+    if ([isFirst isEqualToString:IsFirstLoginApp] == false) {
+        // 第一次登录
+        StartUpVC *vc = [[StartUpVC alloc] init];
+        vc.rootVC = rootVC;
+        rootVC = vc;
+        
+        [NSUserDefaults addValue:IsFirstLoginApp key:IsFirstLoginApp];
+    }else{
+        
+        MyUserModel *user = [MyUserModel user];
+        if ([user.token isValidString]) {
+            rootVC = [[BaTabBarController alloc] init];
+        }
+        
+        
+        
+//        if (user) {
+//            [[SPKitExample sharedInstance] callThisAfterISVAccountLoginSuccessWithYWLoginId:user.mid passWord:user.mid preloginedBlock:^{
+//                //可以显示会话列表页面
+//            } successBlock:^{
+//                GYLog(@"阿里百川登录成功！");
+//            } failedBlock:^(NSError *error){
+//                /// 可以显示错误提示
+//                [UserModel saveUser:nil];
+//                [Networking loginout:@"登录失败，请重新登录！"];
+//            }];
+//        }
+    }
+    
+    self.window.rootViewController = rootVC;
 }
 
 #pragma mark -- 检测网络

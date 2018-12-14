@@ -38,5 +38,7 @@
 
 #import "NSString+GY.h"
 
+#import "NSDictionary+jk.h"
+
 
 #endif /* HeaderGategory_h */

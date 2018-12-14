@@ -21,5 +21,9 @@ static CGFloat const TOUCHBTLEFT = 50;
 // 版权 Copyright
 static NSString  *const APP_COPYRIGHT           = @"Copyright © 2018 Paul. All rights reserved.";
 
+// 是否是第一次进入APP
+static NSString  *const IsFirstLoginApp           = @"IsFirstLoginApp";
+
+
 
 #endif /* HeaderConst_h */

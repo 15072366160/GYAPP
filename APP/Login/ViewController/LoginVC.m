@@ -8,6 +8,9 @@
 
 #import "LoginVC.h"
 #import "LoUnionView.h"
+#import "MyUserModel.h"
+// 主页
+#import "BaTabBarController.h"
 
 @interface LoginVC ()
 
@@ -56,6 +59,8 @@
     
     [self.pwdField addEyes];
     
+    self.phoneField.text = [MyUserModel user].phone;
+    
     // 遇到问题
     [self.view addSubview:self.questionBtn];
 }
@@ -91,8 +96,27 @@
         [GYHUD _showInfoWithStatus:@"请输入密码"];
         return;
     }
-    
-    
+
+    NSString *password = [pwd jk_md5String];
+    WEAKSELF;
+    [GYNetworking loginWithPhone:phone password:password result:^(BOOL isSuccess, id data, NSString *msg, NSInteger code) {
+        if (isSuccess) {
+            
+            // 存用户
+            MyUserModel *user = [MyUserModel mj_objectWithKeyValues:data];
+            [MyUserModel save:user];
+            
+            // 更新 rootViewController
+            BaTabBarController *tab = [[BaTabBarController alloc] init];
+            weakSelf.view.window.rootViewController = tab;
+            
+            // 提示
+            [GYHUD _showSuccessWithStatus:@"登录成功"];
+            
+        } else {
+            [GYHUD _showErrorWithStatus:msg];
+        }
+    }];
 }
 
 

@@ -60,10 +60,6 @@
     [self dismissWithDelay:delay];
 }
 
-+ (void)checkError:(GYAPIError *)error{
-    [self _showErrorWithStatus:error.describe];
-}
-
 + (void)successLoad{
     [self _showSuccessWithStatus:@"数据请求成功"];
 }

@@ -176,5 +176,13 @@
     [self pop];
 }
 
+- (void)updateWindowsRootViewController:(UIViewController *)rootViewController{
+    
+    [UIView transitionWithView:self.view.window duration:0.7 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        
+        self.view.window.rootViewController = rootViewController;
+    } completion:nil];
+}
+
 @end
 

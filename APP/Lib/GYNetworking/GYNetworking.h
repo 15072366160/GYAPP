@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "GYAPIError.h"
-
-typedef void(^ResultBlock)(BOOL isSuccess, id data, GYAPIError *error);
+typedef void(^ResultBlock)(BOOL isSuccess, id data, NSString *msg, NSInteger code);
 
 typedef NS_ENUM(NSUInteger) {
     NetModeGET,
@@ -65,9 +63,6 @@ typedef NS_ENUM(NSUInteger) {
  @param result 返回结果
  */
 + (void)hudPostWithURL:(NSString *)url params:(NSDictionary *)params result:(ResultBlock)result;
-
-// 解密数据
-+ (id)decodeData:(NSString *)str;
 
 // 结果返回
 + (void)getResult:(id)responseObject result:(ResultBlock)result;

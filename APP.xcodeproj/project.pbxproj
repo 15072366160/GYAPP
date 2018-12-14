@@ -21,6 +21,7 @@
 		DA0EE19021942D3100A3B283 /* MaLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0EE18E21942D3100A3B283 /* MaLoginVC.m */; };
 		DA197ABE21C0B74C0072CD53 /* SecVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA197ABD21C0B74C0072CD53 /* SecVC.m */; };
 		DA197AC121C0B7600072CD53 /* ThiVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA197AC021C0B7600072CD53 /* ThiVC.m */; };
+		DA27460021C1FB3600B5B7AC /* NSDictionary+jk.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2745FF21C1FB3600B5B7AC /* NSDictionary+jk.m */; };
 		DA625C4D2195635300455FFB /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA625C4B2195635300455FFB /* LoginVC.m */; };
 		DA625C5121956FFB00455FFB /* MyUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DA625C5021956FFB00455FFB /* MyUserModel.m */; };
 		DA625C592195847800455FFB /* LoQuestionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = DA625C572195847800455FFB /* LoQuestionVC.m */; };
@@ -56,7 +57,6 @@
 		DAD03F9D218C0AAF00B92B8B /* HMScanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DAD03F93218C0AAF00B92B8B /* HMScanner.bundle */; };
 		DAD03F9E218C0AAF00B92B8B /* HMScanerCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD03F94218C0AAF00B92B8B /* HMScanerCardViewController.m */; };
 		DAD03F9F218C0AAF00B92B8B /* HMScannerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD03F96218C0AAF00B92B8B /* HMScannerController.m */; };
-		DAD03FA8218C20A800B92B8B /* GYAPIError.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD03FA3218C20A800B92B8B /* GYAPIError.m */; };
 		DAD03FA9218C20A800B92B8B /* GYNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD03FA4218C20A800B92B8B /* GYNetworking.m */; };
 		DAD03FAA218C20A800B92B8B /* GYNetworking+API.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD03FA5218C20A800B92B8B /* GYNetworking+API.m */; };
 		DAD03FB3218C220F00B92B8B /* UIViewController+GY.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD03FAF218C220F00B92B8B /* UIViewController+GY.m */; };
@@ -107,6 +107,8 @@
 		DA197ABD21C0B74C0072CD53 /* SecVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecVC.m; sourceTree = "<group>"; };
 		DA197ABF21C0B7600072CD53 /* ThiVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThiVC.h; sourceTree = "<group>"; };
 		DA197AC021C0B7600072CD53 /* ThiVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThiVC.m; sourceTree = "<group>"; };
+		DA2745FE21C1FB3600B5B7AC /* NSDictionary+jk.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+jk.h"; sourceTree = "<group>"; };
+		DA2745FF21C1FB3600B5B7AC /* NSDictionary+jk.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+jk.m"; sourceTree = "<group>"; };
 		DA625C4A2195635300455FFB /* LoginVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		DA625C4B2195635300455FFB /* LoginVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		DA625C4F21956FFB00455FFB /* MyUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyUserModel.h; sourceTree = "<group>"; };
@@ -186,10 +188,8 @@
 		DAD03F98218C0AAF00B92B8B /* HMScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMScannerViewController.h; sourceTree = "<group>"; };
 		DAD03FA1218C20A800B92B8B /* GYNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYNetworking.h; sourceTree = "<group>"; };
 		DAD03FA2218C20A800B92B8B /* GYAPIHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYAPIHeader.h; sourceTree = "<group>"; };
-		DAD03FA3218C20A800B92B8B /* GYAPIError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYAPIError.m; sourceTree = "<group>"; };
 		DAD03FA4218C20A800B92B8B /* GYNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GYNetworking.m; sourceTree = "<group>"; };
 		DAD03FA5218C20A800B92B8B /* GYNetworking+API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GYNetworking+API.m"; sourceTree = "<group>"; };
-		DAD03FA6218C20A800B92B8B /* GYAPIError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GYAPIError.h; sourceTree = "<group>"; };
 		DAD03FA7218C20A800B92B8B /* GYNetworking+API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GYNetworking+API.h"; sourceTree = "<group>"; };
 		DAD03FAF218C220F00B92B8B /* UIViewController+GY.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GY.m"; sourceTree = "<group>"; };
 		DAD03FB0218C220F00B92B8B /* UIViewController+GY.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GY.h"; sourceTree = "<group>"; };
@@ -611,8 +611,6 @@
 		DAD03FA0218C206600B92B8B /* GYNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				DAD03FA6218C20A800B92B8B /* GYAPIError.h */,
-				DAD03FA3218C20A800B92B8B /* GYAPIError.m */,
 				DAD03FA2218C20A800B92B8B /* GYAPIHeader.h */,
 				DAD03FA1218C20A800B92B8B /* GYNetworking.h */,
 				DAD03FA4218C20A800B92B8B /* GYNetworking.m */,
@@ -666,6 +664,8 @@
 				DAD03FE1218C3E4A00B92B8B /* UIDevice+GY.m */,
 				DA067A4C2191503400BAD864 /* NSString+GY.h */,
 				DA067A4D2191503400BAD864 /* NSString+GY.m */,
+				DA2745FE21C1FB3600B5B7AC /* NSDictionary+jk.h */,
+				DA2745FF21C1FB3600B5B7AC /* NSDictionary+jk.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -841,6 +841,7 @@
 				DAD03FB4218C220F00B92B8B /* UIAlertController+TT.m in Sources */,
 				DAD03F9E218C0AAF00B92B8B /* HMScanerCardViewController.m in Sources */,
 				DA0EE18B21942D0C00A3B283 /* LoSendMsgVC.m in Sources */,
+				DA27460021C1FB3600B5B7AC /* NSDictionary+jk.m in Sources */,
 				DAD03FD9218C29D800B92B8B /* NSUserDefaults+Category.m in Sources */,
 				DA0EE180219425C700A3B283 /* GYTransition.m in Sources */,
 				DA0EE19021942D3100A3B283 /* MaLoginVC.m in Sources */,
@@ -881,7 +882,6 @@
 				DA02C5B621904C92006B7643 /* MyVC.m in Sources */,
 				DAD03FE6218C434800B92B8B /* CrashManager.m in Sources */,
 				DAD03FCF218C289400B92B8B /* UIView+GY.m in Sources */,
-				DAD03FA8218C20A800B92B8B /* GYAPIError.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

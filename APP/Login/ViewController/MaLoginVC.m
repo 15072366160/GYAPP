@@ -13,16 +13,32 @@
 #import "MyUserModel.h"
 
 
+
 @interface MaLoginVC ()
 
 @property (nonatomic,strong) UIImageView *imgView;
 @property (nonatomic,strong) UIButton *loginBtn;
+@property (nonatomic,strong) UIVisualEffectView *effectView; // 毛玻璃
 
 @property (nonatomic,assign) BOOL isRegiest;
 
 @end
 
 @implementation MaLoginVC
+
+- (UIVisualEffectView *)effectView{
+    if (_effectView == nil) {
+        /*
+         毛玻璃的样式(枚举)
+         UIBlurEffectStyleExtraLight,
+         UIBlurEffectStyleLight,
+         UIBlurEffectStyleDark
+         */
+        UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+        _effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
+    }
+    return _effectView;
+}
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -33,19 +49,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor clearColor];
+    // 添加背后蓝色模块
+    CALayer *layer = [[CALayer alloc] init];
+    layer.frame = CGRectMake(0, 0, self.view.width, self.view.height / 4);
+    layer.backgroundColor = MAIN_COLOR.CGColor;
+    [self.view.layer addSublayer:layer];
     
-    // 返回
-    UIButton *bkBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [bkBtn setImage:[UIImage imageNamed:@"close"] forState:0];
-    [bkBtn addTarget:self action:@selector(bkBtnAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:bkBtn];
-    [bkBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo([GYScreen shared].navStatusH);
-        make.right.mas_equalTo(0);
-        make.height.mas_equalTo(44);
-        make.width.mas_equalTo(70);
-    }];
+    // 添加高斯模糊
+    self.effectView.frame = CGRectMake(0, 0, self.view.width, self.view.height / 3);
+    [self.view addSubview:self.effectView];
+    
+//    // 返回
+//    UIButton *bkBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [bkBtn setImage:[UIImage imageNamed:@"close"] forState:0];
+//    [bkBtn addTarget:self action:@selector(bkBtnAction) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:bkBtn];
+//    [bkBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo([GYScreen shared].navStatusH);
+//        make.right.mas_equalTo(0);
+//        make.height.mas_equalTo(44);
+//        make.width.mas_equalTo(70);
+//    }];
     
     // logo图
     UIImageView *imgView = [[UIImageView alloc] init];
@@ -64,7 +88,6 @@
     UILabel *label = [[UILabel alloc] init];
     label.textAlignment = NSTextAlignmentCenter;
     label.font = FONT_BOLD(22);
-//    label.text = @"久玩游戏";
     [self.view addSubview:label];
     [label mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(imgView.mas_bottom).offset(15);
@@ -80,13 +103,15 @@
         text = @"登录";
         self.isRegiest = true;
         
-        [imgView sd_setImageWithURL:[NSURL URLWithString:user.headimgurl] placeholderImage:[UIImage imageNamed:@"logo"]];
-        label.text = user.nickname.length > 0? user.nickname : @"久玩游戏";
+        [imgView sd_setImageWithURL:[NSURL URLWithString:user.userIcon] placeholderImage:[UIImage imageNamed:@"logo"]];
+        label.text = [user.nick isValidString] ? [@"欢迎回来，" stringByAppendingString:user.nick] : APP_NAME;
         action = @selector(loginBtnAction);
     }else{
         text = @"注册";
         self.isRegiest = false;
         action = @selector(regiestAction);
+        imgView.image = [UIImage imageNamed:@"logo"];
+        label.text = APP_NAME;
     }
     
     // 注册或者登录
@@ -138,10 +163,10 @@
     [self.loginBtn corRadius:5];
 }
 
-// 返回
-- (void)bkBtnAction{
-    [self.navigationController dismiss];
-}
+//// 返回
+//- (void)bkBtnAction{
+//    [self.navigationController dismiss];
+//}
 
 // 更多
 - (void)moreBtnAction{

@@ -8,6 +8,10 @@
 
 #import "LoSendMsgVC.h"
 #import "LoUnionView.h"
+#import "MyUserModel.h"
+
+// 主页
+#import "BaTabBarController.h"
 
 @interface LoSendMsgVC ()
 
@@ -108,7 +112,7 @@
         return;
     }
     
-    if (self.mode == FindRegiestModeRegiest) {
+    if (self.mode == FindRegiestModeFind) {
         [self findAction:phone code:code pwd:pwd];
     }else{
         [self regiestAction:phone code:code pwd:pwd];
@@ -118,6 +122,29 @@
 // 注册
 - (void)regiestAction:(NSString *)phone code:(NSString *)code pwd:(NSString *)pwd{
     
+    NSString *password = [pwd jk_md5String];
+    WEAKSELF;
+    [GYNetworking regiestWithPhone:phone password:password result:^(BOOL isSuccess, id data, NSString *msg, NSInteger code) {
+        if (isSuccess) {
+            [weakSelf regiestSuccess:data];
+        } else {
+            [GYHUD _showErrorWithStatus:msg];
+        }
+    }];
+}
+
+- (void)regiestSuccess:(id)data{
+    
+    // 存用户
+    MyUserModel *user = [MyUserModel mj_objectWithKeyValues:data];
+    [MyUserModel save:user];
+    
+    // 回调切换root
+    BaTabBarController *tab = [[BaTabBarController alloc] init];
+    self.view.window.rootViewController = tab;
+    
+    // 提示
+    [GYHUD _showSuccessWithStatus:@"注册成功"];
 }
 
 // 找回密码
@@ -127,7 +154,7 @@
 
 // 发送验证码
 - (void)sendCodeAction{
-    
+
 }
 
 

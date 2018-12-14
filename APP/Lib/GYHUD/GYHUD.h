@@ -7,7 +7,6 @@
 //
 
 #import <SVProgressHUD/SVProgressHUD.h>
-#import "GYAPIError.h"
 
 @interface GYHUD : SVProgressHUD
 
@@ -60,11 +59,6 @@
  提示照片28x28 white PNGs
  **/
 + (void)_showImage:(UIImage*)image status:(NSString*)status;
-
-/**
- 检查错误
- **/
-+ (void)checkError:(GYAPIError *)error;
 
 /**
  数据请求成功
